@@ -1,0 +1,55 @@
+import "dotenv/config";
+
+import express from "express";
+import cors from "cors";
+
+import connectDB from "./config/db.js";
+
+import authRoutes from "./routes/authRoutes.js";
+import profileRoutes from "./routes/profileRoutes.js";
+import projectRoutes from "./routes/projectRoutes.js";
+import skillRoutes from "./routes/skillRoutes.js";
+import portfolioRoutes from "./routes/portfolioRoutes.js";
+import contactRoutes from "./routes/contactRoutes.js";
+import uploadRoutes from "./routes/uploadRoutes.js";
+import experienceRoutes from "./routes/experienceRoutes.js";
+import educationRoutes from "./routes/educationRoutes.js";
+
+connectDB();
+
+const app = express();
+
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173",
+      process.env.FRONTEND_URL,
+    ],
+    credentials: true,
+  })
+);
+
+app.use(express.json());
+
+app.get("/", (req, res) => {
+  res.json({
+    success: true,
+    message: "Welcome to CodeFolio Backend",
+  });
+});
+
+app.use("/api/auth", authRoutes);
+app.use("/api/profile", profileRoutes);
+app.use("/api/projects", projectRoutes);
+app.use("/api/skills", skillRoutes);
+app.use("/api/portfolio", portfolioRoutes);
+app.use("/api/contact", contactRoutes);
+app.use("/api/upload", uploadRoutes);
+app.use("/api/experience", experienceRoutes);
+app.use("/api/education", educationRoutes);
+
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
