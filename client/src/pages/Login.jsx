@@ -4,7 +4,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { FaEnvelope, FaLock } from "react-icons/fa";
 
 import { loginUser } from "../services/authService";
-import { AuthContext } from "../context/AuthContext";
+import { Authcontext } from "../context/Authcontext";
 
 function Login() {
   const {
@@ -14,7 +14,7 @@ function Login() {
   } = useForm();
 
   const navigate = useNavigate();
-  const { login } = useContext(AuthContext);
+  const { login } = useContext(Authcontext);
 
   const onSubmit = async (data) => {
     try {

@@ -1,7 +1,7 @@
 import { createContext, useState } from "react";
 import AuthProvider from "./context/Authcontext";
 
-export const AuthContext = createContext();
+export const Authcontext = createContext();
 
 function AuthProvider({ children }) {
   const [user, setUser] = useState(() => {
@@ -22,7 +22,7 @@ function AuthProvider({ children }) {
   };
 
   return (
-    <AuthContext.Provider
+    <Authcontext.Provider
       value={{
         user,
         login,
@@ -30,7 +30,7 @@ function AuthProvider({ children }) {
       }}
     >
       {children}
-    </AuthContext.Provider>
+    </Authcontext.Provider>
   );
 }
 

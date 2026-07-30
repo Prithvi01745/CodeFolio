@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useContext } from "react";
-import { AuthContext } from "../context/AuthContext";
+import { Authcontext } from "../context/Authcontext";
 import {
   FaArrowRight,
   FaPlus,
@@ -12,7 +12,7 @@ import {
 import Statistics from "./Statistics";
 
 function DashboardHome() {
-  const { user } = useContext(AuthContext);
+  const { user } = useContext(Authcontext);
   return (
     <div className="space-y-8 pb-10">
 
