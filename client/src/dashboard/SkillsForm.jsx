@@ -6,7 +6,7 @@ import {
   deleteSkill,
 } from "../services/skillService";
 
-import SkillCard from "../components/SkillCard";
+import skillCard from "../components/skillCard";
 import TechnologyChip from "../components/TechnologyChip";
 import toast from "react-hot-toast";
 

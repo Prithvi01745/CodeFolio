@@ -4,7 +4,7 @@ import Features from "../components/landing/Features";
 import HowItWorks from "../components/landing/HowItWorks";
 import CTA from "../components/landing/CTA";
 import Footer from "../components/landing/Footer";
-import Stats from "../components/landing/Stats";
+import Stats from "../components/landing/stats";
 
 function Home() {
   return (
