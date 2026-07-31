@@ -177,7 +177,7 @@ function Hero({ portfolio, darkMode, setDarkMode }) {
 
         {/* Background Glow */}
 
-        <div className="absolute h-[420px] w-[420px] rounded-full bg-gradient-to-r from-sky-500/20 via-indigo-500/20 to-violet-500/20 blur-3xl"></div>
+        <div className="absolute h-[420px] w-[420px] rounded-full bg-gradient-to-r from-cyan-500/30 via-blue-500/30 to-purple-500/30 blur-3xl animate-pulse"></div>
 
         {/* Decorative Ring */}
 
@@ -187,7 +187,7 @@ function Hero({ portfolio, darkMode, setDarkMode }) {
 
         {/* Profile Card */}
 
-        <div className="relative z-10 rounded-[40px] border border-white/40 bg-white/60 p-6 shadow-2xl backdrop-blur-xl dark:border-slate-700 dark:bg-slate-900/60">
+        <div className="rounded-[30px] bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 p-1 animate-spin [animation-duration:10s]">
 
           <img
             src={
@@ -197,7 +197,7 @@ function Hero({ portfolio, darkMode, setDarkMode }) {
               )}&background=2563eb&color=fff&size=500`
             }
             alt={portfolio.name}
-            className="h-80 w-80 rounded-3xl object-cover shadow-2xl"
+            className="h-80 w-80 rounded-[26px] object-cover"
           />
 
         </div>
